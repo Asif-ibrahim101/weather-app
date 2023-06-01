@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ubuntu:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #27374D;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.weather_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.weather_section .weather_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width: 350px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weather_form{
+    padding: 1rem;
+}
+
+#form {
+    display: flex;
+    width: 100%;
+}
+
+#form i {}
+
+#form input {
+    width: 100%;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    outline: none;
+    background: none;
+    text-transform: capitalize;
+}
+
+#form .btn {
+    padding: 0.5rem 0.5rem;
+    background-color: none;
+    background: #AEE2FF;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+#search {
+    font-size: 20px;
+}
+
+.weather_icon {
+    text-align: center;
+}
+
+.weather_temp {
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding:  0 0.5rem;
+    line-height: 1.1;
+}
+
+.details .humidity {
+    display: flex;
+    align-items: center;
+}
+
+.details .titles{
+    font-weight: 600;
+}
+
+.humidity i {
+    margin: 20px 15px;
+
+}
+
+.windspeed i {
+    margin: 20px 15px;
+}
+
+.humidity p{
+    font-weight: 900;
+}
+
+.windspeed p {
+    font-weight: 900;
+}
+
+.details .windspeed {
+    display: flex;
+    align-items: center;
+}
+
+.weather_icon {
+    padding-top: 2rem;
+    object-fit: contain;
+}
+
+.weather_icon img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.temperature {
+    position: relative;
+}
+
+.temperature p{
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.degree {
+    position: absolute;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.weather_desc{
+    margin: 0.5rem;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 700;
+}

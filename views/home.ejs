@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | see weather on the go</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="https://kit.fontawesome.com/2552c2169d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="weather_section">
+        <div class="weather_container">
+            <div class="weather_form">
+                <form id="form" action="/" method="post">
+                    <i class="fa-solid fa-location-dot fa-2x"></i>
+                    <input autocomplete="off" name="place" id="location" type="text" placeholder="Enter Your Location">
+                    <button class="btn" type="submit">
+                        <i id="search" class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="weather_icon">
+                <% if(icon !==null) { %>
+                    <img class="icon" src="http://openweathermap.org/img/w/<%= icon %>.png" alt="">
+                    <% } %>
+            </div>
+
+            <div class="weather_temp">
+                <div class="temperature">
+                    <% if(temp !==null) {%>
+                        <p>
+                            <%= temp %> <span class="degree">°C</span>
+                        </p>
+                        <% } %>
+                </div>
+                <div class="weather_desc">
+                    <% if(des !==null) {%>
+                        <p>
+                            <%= des %>
+                        </p>
+                        <% } %>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="details">
+                <div class="windspeed">
+                    <i class="fa-solid fa-snowflake fa-2x"></i>
+                    <div class="info">
+                        <% if(humidity !==null) {%>
+                            <p>
+                                <%= humidity %>%
+                            </p>
+                        <% } %>
+                        <p class="titles">humidity</p>
+                    </div>
+                </div>
+                <div class="humidity">
+                    <i class="fa-solid fa-wind fa-2x"></i>
+                    <div class="info">
+                        <% if(speed !==null) {%>
+                            <p>
+                                <%=speed%>km/h
+                            </p>
+                        <% } %>
+                        <p class="titles">windspeed</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
